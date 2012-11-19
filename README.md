@@ -1,3 +1,21 @@
+bucketconstraintstest
+=====================
+
+## Description
+
+Test the restriction leve of user when handling objects in a bucket
+
+## Procedure
+
+1. Create a directory and copy over the scripts and files: adduserandgetcredntials.pl, bucketconstraintstest.pl, dummyobj. As well as the admin credentials to the CLC.
+2. Add two users using the adduserandgetcredentials.pl script
+3. Run the bucketconstraintstest.pl twice which has a procedure as follows:
+4. Take in the bucket value and object path (also validate the file)
+5. Make a connection to the walrus
+6. Make sure the bucket exists with an ACL
+7. Upload the object to the bucket with the same ACL rule and it should fail since the bucket cannot allow the user to do it
+
+
 # Eucalyptus Testunit Framework
 
 Eucalyptus Testunit Framework is designed to run a list of test scripts written by Eucalyptus developers.
